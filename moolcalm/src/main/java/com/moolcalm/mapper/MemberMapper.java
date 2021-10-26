@@ -2,11 +2,17 @@ package com.moolcalm.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Select;
+
 import com.moolcalm.domain.InfoVO;
+
 
 public interface MemberMapper {
 
-    //public void join(Map<String, Object>map,InfoVO vo);     //회원가입 관련
+	//로그인 처리
+	public InfoVO login(InfoVO member);
+	
+//public void join(Map<String, Object>map,InfoVO vo);     //회원가입 관련
     
     public void join(InfoVO vo);   
    
