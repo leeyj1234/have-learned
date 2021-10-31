@@ -22,6 +22,13 @@ public class MemberServiceImpl implements MemberService{
 		return mapper.login(member);
 	};
 	
+	//출석체크 시 포인트보상, 업데이트 처리
+	@Override
+	public void dailycheck(String email) {
+		log.info("출석체크");
+		mapper.dailycheck(email);
+	};
+	
 	public void join(InfoVO vo) {	
 		mapper.join(vo);
 	}
@@ -38,7 +45,7 @@ public class MemberServiceImpl implements MemberService{
 
 	public int email_check(String email) {
         int check = mapper.email_check(email);
-        log.info("check="+check);        
+        log.info("check="+check);
         return check;
 	}
 
@@ -47,5 +54,12 @@ public class MemberServiceImpl implements MemberService{
 		return mapper.member_profile();
 	}
 
+	@Override
+	public void info_delete(String email) {
+		mapper.info_delete_r(email);
+		mapper.info_delete_c(email);
+		mapper.info_delete(email);
+		
+	}
 
 }
