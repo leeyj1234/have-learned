@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+/* zIndex
+    1.2.3.4,5
+*/
+/* opacity 0.7 */
+
+/* text-inner padding: 195px 25px 146px 340px; */
+
+h1.logo{
+    top: 50px;
+    left: 25px;
+}
+
+h1.logo
+>a{
+    display: block;
+    width: 40px;
+    height: 30px;
+
+    background-image: url(../img/logo_mini.png);
+    background-repeat: no-repeat;
+    background-position: center -10px;
+    background-size: 145%;
+}
+
+#header-gnb{
+    padding-top: 205px;
+    width: 320px;
+}
+
+nav#header-gnb
+>ul
+>li{
+    width: 25%;
+    text-align: center;
+}
+
+nav#header-gnb
+>ul>li
+>a{
+    opacity: 0.7;
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+nav#header-gnb
+>ul>li
+>a:hover{
+    opacity: 1;
+}
+
+/* header - end */
+
+#container-main{
+    width: 100%;
+    height: 100%;
+}
+
+div.lylics-box
+, div.lylics-cover
+  >form
+  >div.lylics{
+    margin-left: 25px;
+    box-sizing: border-box;   
+
+    font-weight: bold;
+    color: rgb(23, 23, 23);
+    
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+div.lylics-box{
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+div.lylics-box
+, div.background-text{
+    overflow-y: scroll;
+}
+
+div.lylics-cover
+>form
+>div.lylics{
+    padding: 0 25px;
+    height: 25px;
+    line-height: 25px;
+    
+    border: 0;
+}
+
+div.lylics-cover
+>form>div.lylics
+>input{
+    border: 0;
+    background: transparent;    
+}
+
+div.lylics-cover
+>form>div.lylics
+>input::placeholder{
+    text-align: right;
+    font-weight: normal;
+}
+
+div.background-text-inner{
+    padding: 195px 25px 146px 340px;
+
+    color: #ccc;
+    font-size: 8px;
+    line-height: 2em;
+    text-align: justify;
+}
+
+/* nav.first --end */
+
+#container-album{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+div.painting-slide figure:hover{
+    color: #ccc;
+}
+
+div.painting-slide img.painting-background{
+    width: 100%;
+}
+
+div.painting-slide figure
+>figcaption.painting-explain{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 340px){
+    div.painting-slide figure
+    >figcaption.painting-explain{
+    font-size: 16px;
+    }
+
+}
+/* nav.second --end*/
+
+article.contact-email{
+    z-index: -1;
+
+    top: -1000%;
+    background-color: #171717;
+}
+
+.animated-cartoon{
+    margin: 0 auto; 
+}
+
+.animated-cartoon
+>iframe{
+    width: inherit;
+    border: 0;
+}
+
+h2.title
+, p.ask-something-notice{
+    opacity: 0.7;
+
+    color: #ccc;
+    text-align: center;
+}
+
+p.ask-something{
+    min-width: 270px;
+    margin-bottom: 35px;    
+}
+
+p.ask-something
+>textarea{
+    border-left-width: 5px;
+    border-radius: 10px;
+    border-color: #ccc;
+}
+
+p.ask-something-notice{
+    padding: 0 25px;
+    margin-bottom: 35px;
+}
+
+fieldset.send-cancel-btn{
+    margin: 0 auto;
+    border: 0;
+
+    justify-content: space-evenly;
+}
+
+legend.ask-something-btn
+>button
+, button.ask-closer{    
+    padding: 2px 10px;
+
+    color: #ccc;
+
+    background-color: transparent;
+    border-width: 0;
+}
+
+legend.ask-something-btn
+>button:hover
+, button.ask-closer:hover{
+    cursor: pointer;
+}
+
+button.ask-closer{
+    bottom: 101px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+button.ask-closer
+>span.read-hidden::before
+, button.ask-closer
+  >span.read-hidden::after{
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 17px;
+}
+
+button.ask-closer
+>span.read-hidden::before{
+    margin-right: -2.5px;
+
+    border-right: 4px solid #ccc;
+    transform: rotate(-45deg);
+}
+
+button.ask-closer
+>span.read-hidden::after{
+    margin-left: -2.5px;
+
+    border-left: 4px solid #ccc;
+    transform: rotate(45deg);
+}
+
+/* container - end */
+
+section#footer-inner{
+    padding: 30px 0 75px;
+    margin: 0 25px;
+
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+}
+
+ul.sns-icons{
+    margin: 0 auto;
+
+    justify-content: space-evenly;
+}
+
+ul.sns-icons
+>li{
+    position: relative;
+
+    width: 32px;
+    height: 30px;
+
+    opacity: 0.3;
+    border-radius: 3px;
+    border: 0;
+    background-color: rgba(255, 255, 255,0.6);    
+}
+
+ul.sns-icons
+>li:hover{
+    margin-top: -1.6px;
+    transform: scale(1.1);
+}
+
+ul.sns-icons
+>li:not(:last-child){
+    margin-right: 5px;
+}
+
+ul.sns-icons
+>li
+>a{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+ul.sns-icons
+>li
+>a
+>span{
+    font-size: 0;
+}
+
+
+/* footer - end */

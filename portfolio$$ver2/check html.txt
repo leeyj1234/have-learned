@@ -1,0 +1,28 @@
+1. index, sns 이미지가 live server로는 보이는데, index를 직접 실행하면 보이지 않는다.
+임시 - image 작업하기
+
+1. index input 문구 추가하면 저장해서 box에 추가
+일정량 초과하면 상단에 책꽂이처럼 묶음 저장- mysql, java로 처리가능한지 확인하기
+
+2. 작품집 slide 3가지 방법
+1. slick
+2. css만 - 유튜브
+3. 내가 js 짜보기
+
+시멘틱 태그 구분
+figure, article, aside
+
+3. 연락은 상단에서 내려오는 검정색 rgba
+내용문구 Dession - Digital Design Specialist사이트 참조
+
+4. 알림메뉴
+크롬에 최적화 되어있습니다.
+scroll-css: firefox??? 적용안됨???? caniuse사이트 참조
+dl, dt, dd
+multi column 다단 처리하기 - 생활코딩 유트브참고
+
+
+****html, css 정독 후 적용하고 싶은 기능 더 찾아보기
+**js 충격적인 실력 다시 확인하세요
+-소이정 애니메이션 배우고 싶다.
+-각 section 페이저로 자동 이동하는 거 해보고 싶다. 내 실력으로
