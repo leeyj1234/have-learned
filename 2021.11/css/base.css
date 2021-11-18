@@ -3,8 +3,14 @@
 *{
     margin: 0;
     padding: 0;
+
+    color: beige;
 }
 
 ul{
     list-style: none;    
+}
+
+a{
+    text-decoration: none;
 }
