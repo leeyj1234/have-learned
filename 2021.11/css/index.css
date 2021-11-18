@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+body{
+    overflow-x: hidden; 
+    position: relative;   
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.main_images img{
+    width: 100vw;
+}
