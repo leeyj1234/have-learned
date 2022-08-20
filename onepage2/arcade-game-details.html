@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Classic Arcade Game Details</title>
+      <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+      <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./CSS/styles.css">
+      <link rel="stylesheet" href="./CSS/styles-project-details.css">
+      <script src="./bootstrap/bootsrtap.bundle.min.js"></script>
+   </head>
+   <body>
+      <div class="container-fluid col-sm-8">
+         <div class="container project-details-container">
+            <div class="row">
+               <div class="project-details-header">
+                  <h1>Classic Arcade Game Details</h1>
+               </div>
+            </div>
+            <br>
+            <div class="row project-details-body">
+               <article id="first-article">
+                  <section>
+                     <h2>Project Overview</h2>
+                     <p>
+                        The goal of this Udacity’s project is to develop a simple arcade game using JavaScript object-oriented
+                        programming features. 
+                        <a href="https://github.com/udacity/frontend-nanodegree-arcade-game">Visual assets and a game loop engine code</a>
+                         were provided for the beginning.
+                     </p>
+                  </section>
+
+                  <div class="article-footer">
+                     <a href="#" class="btn" id="show-more-details" onclick="showMore()">Implementation Details</a>
+                     <a href="./portfolio.html" class="go-back-link" id="first-go-back-link">
+                        <img src="./images/icons/go-back.png" alt="go back icon" data-bs-toggle="tooltip" title="Go back">
+                     </a>
+                  </div>
+               </article>
+               <article class="project-details-body-extended" id="second-article">
+                  <section>
+                     <h2>Implementation</h2>
+                     <br>
+                     <p>
+                        We need to add some functionality to the starter code and develop next entities and conditions:
+                     </p>
+                     <ul>
+                        <li>Develop the “Hero".</li>
+                        <li>Develop the "Enemies".</li>
+                        <li>Develop the collisions and win conditions.</li>
+                        <li>Describe the game reset logic.</li>
+                     </ul>
+
+                     <h3>Developing the "Hero"</h3>
+                     <p>
+                        In file app.js:
+                        <em>`class Hero `</em>  consist of a constructor function and methods:
+                        <ul>
+                           <li> <em>`constructor()`</em> defines the 
+                        hero's initial position on the board, an image we use to render the hero, and a boolean operator which will 
+                        be used later as a part of the resetting process.</li>
+                           <li><em>`update()`</em> method contains:
+                              <ul>
+                                 <li>The collision condition between the hero and enemies.</li>
+                                 <li>The win condition if the hero reaches the water.</li>
+                                 <li>Resets hero position to an initial if any of them has occurred</li>
+                              </ul>
+                           </li>
+                           <li></li>
+                        </ul>
+                        <em>`reset()`</em> function contains the hero's initial coordinates on the board.
+                        <em>`render()`</em> method renders the hero at an initial position.
+                        
+                        <ul><em>`handleInput()`</em> function: 
+                           <li>
+                              Updates the hero's x/y coordinates accordingly to pressed key 
+                              and width/height of game board blocks.
+                           </li>
+                           <li>`if` conditions in lines 67, 72, 77, and 82 keep the hero inside the game board</li>
+                        </ul>
+                        <em>`const player = new Hero();`</em>  in line 92, instantiates the Hero object;
+                     </p>
+                     <br>
+
+                     <h3>Developing the "Enemies"</h3>
+                     <p>
+                        <ul>
+                           In <em>`var Enemy = function(x, y, speed)`</em>:
+                           <li><em>`this.x = x; this.y = y;`</em> - set a placeholder for an enemy's initial position.</li>
+                           <li><em>`this.speed`</em> - set an enemy's speed</li>
+                        </ul>
+                        Then in lines 95 - 101, we set up six enemy objects and create an <em>`allEnemies`</em> array.
+
+                        <ul> <em>`Enemy.prototype.update = function(dt)`</em>:
+                           <li>Contains a condition that allows the enemies to move away from the board.</li>
+                           <li>After that, returns enemies to the start.</li>
+                           <li>Randomizes initial enemies' position by x/y axis.</li>
+                        </ul>
+                        <em>`Enemy.prototype.render = function()`</em> - draws the enemies on the screen.
+                     </p>
+                     <br>
+
+                     <h3>Developing Collisions and Win Conditions</h3>
+                     <p>In lines 42 - 43, we loop through <em>`allEnemies`</em> array and compare their current y-coordinates 
+                        with the hero's current position. If they match, we consider it as a collision and reset the hero's 
+                        position to initial in line 44 by <em>`this.reset()`</em>.
+                     </p>
+                     <p>
+                        The user wins when the hero reaches the water. So the winning condition is <em>`this.y < 20`</em>. 
+                        We check it in lines 46-52. Then, in the hero's constructor function,  we assign <em>`true`</em>  to `this.you`, 
+                        and return the hero to the start position.
+                     </p>
+                     <br>
+
+                     <h3>Game Reset</h3>
+                     <p>
+                        In <em>engine.js</em>, in lines 11 and 12, we create two variables: <em>`modal`</em>  and <em>`playAgain`</em>. 
+                        We use them for the modal window.
+                     </p>
+                     <p>
+                        In line 45, we check the boolean <em>`youWin`</em>. If it evaluates to <em>`true`</em>:
+                        <ul>
+                           <li>We stop game animation with <em>`win.cancelAnimationFrame(gameOver);`</em></li>
+                           <li>Add class <em>`visible`</em> to the <em>`div'</em> in line 11 in index.html
+                              and display a pop-up window with the <em>`Play Again`</em> button.
+                           </li>
+                        </ul>
+                        If <em>`youWin`</em> evaluates to <em>`false`</em>, the game continues with 
+                        <em>`gameOver = win.requestAnimationFrame(main)`</em> in lines 48-50.
+                     </p>
+                     <p>
+                        Function <em>`playAgain.addEventListener`</em> in line 14 adds an event listener to the <em>`Play Again` button</em>, and after pushing it:
+                        <ul>
+                           <li>Toggles off the modal window.</li>
+                           <li>Changes <em>`youWin`</em> to <em>`false`</em>.</li>
+                           <li>Restarts the animation loop.</li>
+                        </ul>
+                     </p>
+                     <br>
+
+                     <h3></h3>
+                     <p>
+                        <ol>
+                           <li>Your task is to use arrow keyboard keys to conduct the hero to the water.</li>
+                           <li>
+                              Use `Up`, `Down`, `Left`, and `Right` arrow keys to move the hero up, down, left, and right accordingly on the game board one block
+                              at a time.
+                           </li>
+                           <li>
+                              You should avoid collisions with bugs. If this happens, the game will be started over, and the hero will return to the initial position.
+                           </li>
+                           <li>
+                              You win when the hero reaches the water; then a pop-up window will appear with an offer to play again.
+                           </li>
+                           <li>Enjoy!</li>
+                        </ol>
+                     </p>
+                     <br>
+                  </section>
+
+                  <div class="article-footer">
+                     <a href="#" class="btn" id="show-less-details" onclick="showLess()">Show Less Details</a>
+                     <a href="./portfolio.html" class="go-back-link" id="second-go-back-link">
+                        <img src="./images/icons/go-back.png" alt="go back icon" data-bs-toggle="tooltip" title="Go back">
+                     </a>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </div>
+      <script src="./scripts/main.js"></script>
+   </body>
+</html>

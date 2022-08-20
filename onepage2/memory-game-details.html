@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Memory Game Details</title>
+      <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+      <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./CSS/styles.css">
+      <link rel="stylesheet" href="./CSS/styles-project-details.css">
+      <script src="./bootstrap/bootsrtap.bundle.min.js"></script>
+   </head>
+   <body>
+      <div class="container-fluid col-sm-8">
+         <div class="container project-details-container">
+            <div class="row">
+               <div class="project-details-header">
+                  <h1>Memory Game Details</h1>
+               </div>
+            </div>
+            <br>
+            <div class="row project-details-body">
+               <article id="first-article">
+                  <section>
+                     <p>
+                        This project is an electronic version of a well-known card game 
+                        <a href="https://en.wikipedia.org/wiki/Concentration_(card_game)" target="_blank">"Concentration."</a>
+                        gives the following definition: "Concentration, also known as <strong>Match Match, Match Up, Memory, Pelmanism, Shinkei-suijaku, Pexeso</strong> or simply <strong>Pairs</strong> , is
+                        a card game in which all of the cards are laid face down... and two cards are flipped face up over each turn. The object of the game is to turn over
+                        pairs of matching cards. The game ends when the last pair has been picked up."
+                        The rules are straightforward enough and do not require further explanation. The main idea was to emulate the logic of this game using <strong>HTML</strong>, <strong>CSS</strong>,
+                        and <strong>JavaScript</strong> and meet all criteria described in 
+                        <a href="https://udacity.com" target="_blank">Udacity's</a>
+                        Memory Game Project Specification and style guides (
+                           <a href="http://udacity.github.io/frontend-nanodegree-styleguide/index.html">HTML</a>
+                           <a href="http://udacity.github.io/frontend-nanodegree-styleguide/css.html">CSS</a>
+                           <a href="(http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html">JavaScript</a>
+                           and 
+                           <a href="udacity.github.io/git-styleguide/">Git Commit Message.</a>) Some starter code was provided.
+                     </p>
+                  </section>
+
+                  <div class="article-footer">
+                     <a href="#" class="btn" id="show-more-details" onclick="showMore()">Implementation Details</a>
+                     <a href="./portfolio.html" class="go-back-link" id="first-go-back-link">
+                        <img src="./images/icons/go-back.png" alt="go back icon" data-bs-toggle="tooltip" title="Go back">
+                     </a>
+                  </div>
+               </article>
+               <article class="project-details-body-extended" id="second-article">
+                  <h2>Implementation</h2> 
+                  <p>At the beginning we have a static image with no interactivity. 'Cards' are
+                     <a href="https://fontawesome.com/icons?from=io" target="blank"> Font Awesome</a>
+                     icons with unique class names <em>fa fa-****</em> for each pair, located as unordered list items with a common class name 'card'. <br>
+                     Developing strategy was as follow:
+                     <ul>
+                        <li>Display shuffled cards on the page;</li>
+                        <li>Flip cards;</li>
+                        <li>Match cards;</li>  
+                        <li>Describe a winning condition;</li>
+                        <li>Provide statistics:</li>
+                           <ul>
+                              <li>Time;</li>
+                              <li>Score;</li>
+                              <li>Moves counter;</li>
+                           </ul>
+                        <li>Develop a reset button;</li>
+                        <li>Develop a modal with some information and an offer to play again;</li>
+                        <li>Animation.</li>
+                     </ul>
+                     <br>
+                  </p>
+
+                  <h3>Shuffle Cards</h3>
+                  <p>
+                     At first an empty array <em>cards</em>  was created in order to keep and shuffle cards.
+                     Then a provided 
+                     <a href="https://www.youtube.com/watch?v=tLxBwSL3lPQ">Fisher-Yates function</a>  was used to shuffle the initial array.
+                     After that, using function <em>displayCards()</em> we loop through aforementioned array an display cards on the page.
+                  </p>
+
+                  <br>
+                  <h3>Flip Cards</h3>
+                  <p>
+                     In app.css, there are several rules for classes <em>'open'</em> , <em>'show,'</em>  and <em>'match.'</em>  When used, they allow to open and hide card icons.
+                     The idea was to use click listeners to switch <em>'open'</em> and <em>'show'</em> classes and, in this way, flip cards. Then an event listener with
+                     the additional condition was added to the cards deck, making it impossible to toggle class <em>'match'</em>  cards. If two cards are opened,
+                     we add them to an array of opened cards <em>`cardsOpened`</em> , which will be used in the next step.
+                  </p>
+
+                  <br>
+                  <h3>Match Cards</h3>
+                  <p>
+                     Every pair has a unique class name, so we can use it as a condition to compare cards in <em>`cardsOpened.`</em>  In lines 66 - 83 we compare two cards. If they match,
+                     we assign them a new class name <em>'match,'</em>  add to the array of matched cards <em>`cardsMatched,`</em>  and clear <em>`cardsOpened`</em>  with <em>`clearCardsOpened().`</em>  If not - toggle
+                     their class names to <em>'cards'</em>  only and clear <em>`cardsOpened.`</em>  At this step, the <em>`setTimeout()`</em>  method is added to delay switching them back.
+                  </p> 
+                  
+                  <br> 
+                  <h3>The Winning Condition</h3>
+                  <p>
+                     When we match a pair of cards, we add them to <em>`cardsMatched,`</em>  so when all eight pairs are matched, the length of this array is equal to sixteen. And this is the winning condition 
+                     -`cardsMatched.length === 16`. After that, the game stops, all counters stop, and a modal window appears.
+                  </p> 
+                  
+                  <br>
+                  <h3>Statistics</h3>
+                  <br> 
+                   <h4>Time</h4> 
+                   <p>
+                     The timer starts when the first card is clicked and stops when all cards are matched. To do so, click even listener was added in line 92 with Boolean condition <em>`clockOff = true.`</em>  
+                     It invokes function <em>`startClock()`</em> and assign <em>`clockOff = false.`</em>  If condition <em>`cardsMatched.length === 16`</em> is met, it calls <em>stopClock()</em>
+                     and stops the clock. Lines 105 - 116 convert milliseconds to seconds and minutes, add to seconds 0, if they are less than ten, and display time to the page with <em>`displayTime().`</em>
+                   </p>
+                   
+                  <br>
+                  <h4>Score</h4>
+                  <p>
+                     According to the project's specification: "The game displays a star rating (from 1 to at least 3) that reflects the player's performance. At the beginning of a game, it should
+                     display at least 3 stars. After some number of moves, it should change to a lower star rating. After a few more moves, it should change to even lower star rating (down to 1)."
+                     I choose the second player's move when the score falls to 2 stars and the fourth one when it falls to 1. After that, with <em>`movesToMatchedRatio,`</em>  it evaluates the ratio 
+                     of matched cards and moves (<em>`movesCounter`</em>). Then in line 119 - 169 functions <em>`starScore()`</em> and <em>`display(OneOrTwoOrThreeStar()`</em> compare ratio coefficients,
+                     assign 1, 2 or 3 stars and display them.
+                  </p>
+                  
+                  
+                  <br>
+                  <h4>Moves Counter</h4>
+                  <p>
+                     For the move counter to work correctly, we must count not every click as one move but two when two cards are compared. Function <em>`clearCardsOpened(),`</em> in lines 54 - 61,
+                     clears the array and invokes <em>`moves(),`</em> which, in its turn, increases <em>`movesCounter`</em> by 1 and displays it on the page.
+                  </p>
+                  
+                  <br>
+                  <h4>Reset Button</h4>
+                  <p>
+                     Lines 171 - 233. A click event listener added in line 222 and assigned to the class <em>`restart.`</em> When it is clicked, it invokes function <em>`resetGame()`</em> which triggers 
+                     other functions: <em>`stopClock(),`</em> <em>`resetClock(),`</em> <em>`resetScore(),`</em> <em>`starScore(),`</em> <em>`movesReset(),`</em> <em>`resetDeck().`</em> 
+                     </p>
+                  
+                  <br>
+                  <h4>Modal</h4>
+                  <p>
+                     In <em>`index.html`</em> was added a div with classes <em>`modal`</em>, <em>`checkmark`</em>, <em>`modal-header`</em>,<em> `modal-stats`</em>,<em> `modal-exclamation`</em>,
+                     <em> `modal-play-again`</em> and a content for the modal. Then, in <em>app.css</em>, I added rules for those classes. A click event listener in line 244 of <em>app.js</em>
+                     listens when the condition <em>`cardsMatched.length === 16`</em> is met, and then the modal window pops up. It displays the congratulatory message, moves, score, time, and offers to play again.
+                  </p>
+                  
+                  <br>
+                  <h3>Animation</h3>
+                  <p>
+                     Animation is used in three places: the modal window, cards deck, and the reset button. Animation in the modal uses 
+                     <a href="https://github.com/daneden/animate.css" target="_blank">Animate.css</a> The cards and the reset button are animated with `@keyframes.`
+                  </p>
+
+                  <div class="article-footer">
+                     <a href="#" class="btn" id="show-less-details" onclick="showLess()">Show Less Details</a>
+                     <a href="./portfolio.html" class="go-back-link" id="second-go-back-link">
+                        <img src="./images/icons/go-back.png" alt="go back icon" data-bs-toggle="tooltip" title="Go back">
+                     </a>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </div>
+      <script src="./scripts/main.js"></script>
+   </body>
+</html>

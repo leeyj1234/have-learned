@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Restaurant Review Website Details</title>
+      <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+      <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./CSS/styles.css">
+      <link rel="stylesheet" href="./CSS/styles-project-details.css">
+      <script src="./bootstrap/bootsrtap.bundle.min.js"></script>
+   </head>
+   <body>
+      <div class="container-fluid col-sm-8">
+         <div class="container project-details-container">
+            <div class="row">
+               <div class="project-details-header">
+                  <h1>Restaurant Review Website Details</h1>
+               </div>
+            </div>
+            <br>
+            <div class="row project-details-body">
+               <article id="first-article">
+                  <section>
+                     <h2>Project Overview</h2>
+                     <p>
+                        I have converted a static webpage to an offline-ready web application in this project.
+                        The task was broken into three main stages:
+                        <ul>
+                           <li>Convert the page to responsive design.</li>
+                           <li>Make the app accessible for screen reader users.</li>
+                           <li>Add a service worker to create a seamless offline user experience.</li>
+                        </ul>
+                        A starter code was provided.
+                     </p>
+                  </section>
+
+                  <div class="article-footer">
+                     <a href="#" class="btn" id="show-more-details" onclick="showMore()">Implementation Details</a>
+                     <a href="./portfolio.html" class="go-back-link" id="first-go-back-link">
+                        <img src="./images/icons/go-back.png" alt="go back icon" data-bs-toggle="tooltip" title="Go back">
+                     </a>
+                  </div>
+               </article>
+               <article class="project-details-body-extended" id="second-article">
+                  <section>
+                     <h2>Implementation</h2>
+                     <br>
+
+                     <h3>Convert into the Responsive Design</h3>
+                     <p>
+                        The website has three different layouts for three different viewport sizes: 600 px, 960 px, and 1280 px.
+                        It makes it responsive on different screen sizes. Three sets of images were used to make the website's 
+                        images responsive: small, medium, and large.
+                     </p>
+                     
+                     <br>
+                     <h3>Make the App accessible to Screen Readers</h3>
+                     <p>
+                        To make the website accessible for screen readers:
+                        <ul>
+                           <li><em>`Alt`</em> attribute was added to all images.</li>
+                           <li>Style of the links and buttons was changed so that users can spot currently focused links
+                              - <em>`:hover`</em> and <em>`:focus`</em> states have different colors.
+                           </li>
+                           <li>A 'skip link' is provided. It allows users to skip the map and go straight to the main content.
+                           </li>
+                           <li>Aria-labels, roles, and links added according to ARIA recommendations.
+                           </li>
+                        </ul>
+                     </p>
+
+                     <br>
+                     <h3>A Service Worker and Caches Added</h3>
+                     <p>
+                        The goal of the last stage of the project - make the website available for offline use.
+                        <ul>
+                           <li>A service worker has been added to retrieve or cache resource requests.</li>
+                           <li>A separate cache for the website's images was created, so once an image has been cached,
+                              the service worker can respond with it the next time it's requested.
+                           </li>
+                           <li>A warning message that the website is offline and maps cannot be displayed at the moment added.</li>
+                        </ul>
+                     </p>
+
+                     <br>
+                     <h3>How to Start the Website</h3>
+                     <p>
+                        <ul>You need to have Python 2 or 3 installed on your computer.
+                           <li>Open a terminal window.</li>
+                           <li>Navigate to the <em>./Projects/Restaurant-Review-App</em> directory in the website's source code</li>
+                           <li>Start a simple HTTP server in this folder to serve up the site files on your local computer. Python has some simple tools to do this.
+                              <ul>
+                                 <li>If you have Python 2.x, spin up the server with <em>`python -m SimpleHTTPServer 8000`</em>.</li>
+                                 <li>For Python 3.x, you can use <em>`python3 -m http.server 8000`</em>.</li>
+                              </ul>
+                           </li>
+                           <li>With your server running, visit the site: `http://localhost:8000`.</li>
+                        </ul>
+                     </p>
+                  </section>
+
+
+                  <div class="article-footer">
+                     <a href="#" class="btn" id="show-less-details" onclick="showLess()">Show Less Details</a>
+                     <a href="./portfolio.html" class="go-back-link" id="second-go-back-link">
+                        <img src="./images/icons/go-back.png" alt="go back icon" data-bs-toggle="tooltip" title="Go back">
+                     </a>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </div>
+      <script src="./scripts/main.js"></script>
+   </body>
+</html>

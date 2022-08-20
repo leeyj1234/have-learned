@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portfolio</title>
+      <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+      <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./CSS/styles.css">
+      <link rel="stylesheet" href="./CSS/styles_portfolio.css">
+      <script src="./bootstrap/bootsrtap.bundle.min.js"></script>
+   </head>
+   <body>
+      <div class="container-fluid">
+         <nav class="navbar navbar-expand-sm justify-content-center d-none d-sm-block d-md-none d-lg-none">
+            <ul class="navbar-nav justify-content-center">
+               <li class="nav-item">
+                  <a class="nav-link" href="about_me.html">About me</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="resume.html">Resume</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="contacts.html">Contacts</a>
+               </li>
+            </ul>
+         </nav>
+      </div>
+      <div class="row">
+         <div class="col-sm-4 d-none d-sm-none d-md-block d-lg-block">
+            <a  data-bs-toggle="tooltip" title="Click to go Home" href="index.html"><img src="../images/Igor_portfolio-photo.jpg" class="rounded-circle mx-auto d-block" alt="Igor Mykhalchuk photo"></a>
+            <h1 id="hero-name-h1">Igor Mykhalchuk</h1>
+               <h2 id="hero-name-h2">Front-End Developer</h2>
+            <!-- Navbar menu for screens more 1000px -->
+            <ul class="nav flex-column two-columns">
+               <li class="nav-item">
+                  <a class="nav-link" href="about_me.html">About Me</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="resume.html">Resume</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+               </li>
+               </ul>
+            <div class="contacts-container">
+               <h6>Get in Touch</h6>
+               <div class="d-flex flex-wrap justify-content-center">
+                  <div class="p-2">
+                     <a href="mailto:fewdsearch@gmail.com"><img src="./images/icons/icons8-mail-100.png" alt="email icon"></a>
+                  </div>
+                  <div class="p-2">
+                     <a href="tel:+1 727-314-3531"><img src="./images/icons/icons8-phone-100.png" alt="phone icon"></a>
+                  </div>
+                  <div class="p-2">
+                     <a href="https://www.linkedin.com/in/imykh/"><img src="./images/icons/icons8-linkedin-100.png" alt="linkedin icon"></a>
+                  </div>
+                  <div class="p-2">
+                     <a href="https://github.com/For1207"><img src="./images/icons/icons8-github-100.png" alt="github icon"></a>
+                  </div>
+                  <div class="p-2">
+                     <a href="https://www.facebook.com/profile.php?id=100014610062734"><img src="./images/icons/icons8-facebook-100.png" alt="facebook icon"></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-8">
+            <div class="container-fluid mt-3" id="portfolio-container">
+               <div class="row">
+                  <div class="col-lg-12" id="portfolio-header">
+                     <h1>Portfolio</h1>
+                  </div>
+               </div>
+               <br>
+               <div class="row">
+                  <div class="col-sm-12 text-black-50">
+                     <div class="col-sm-5">
+                        <div class="card">
+                           <div class="card-header">
+                              <h4 class="card-title">Memory Game</h4>
+                           </div>
+                           <div class="card-body">
+                              <a class="portfolio-link" href="./Projects/Memory-Game/memory-game.html">
+                                 <img src="./images/projects_screenshots/Memory_game.png" alt="">
+                              </a>
+                           </div> 
+                           <div class="card-footer">
+                              <p>Emulates the logic of a card game using JavaScript, CSS, and HTML</p>
+                              <a href="./memory-game-details.html" class="btn">Details</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-5">
+                        <div class="card">
+                           <div class="card-header">
+                              <h4 class="card-title">Restaurant Review App</h4>
+                           </div>
+                           <div class="card-body">
+                              <a class="portfolio-link" href="./restaurant-review-app.html">
+                                 <img src="./images/projects_screenshots/Restaurant_Review_App.png" alt="">
+                              </a>
+                           </div> 
+                           <div class="card-footer">
+                              <p>An offline-ready responsive website, accessible for screen readers</p>
+                              <a href="./restaurant-review-app-details.html" class="btn">Details</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-5">
+                        <div class="card">
+                           <div class="card-header">
+                              <h4 class="card-title">Feed Reader Testing</h4>
+                           </div>
+                           <div class="card-body">
+                              <a class="portfolio-link" href="./Projects/Feed-Reader/feed-reader.html">
+                                 <img src="./images/projects_screenshots/Feed_Reader_Testing.png" alt="">
+                              </a>
+                           </div> 
+                           <div class="card-footer">
+                              <p>Automated testing of a web RSS feeds application with Jasmine JS</p>
+                              <a href="./feed-reader-testing-details.html" class="btn">Details</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-5">
+                        <div class="card">
+                           <div class="card-header">
+                              <h4 class="card-title">Arcade Game</h4>
+                           </div>
+                           <div class="card-body">
+                              <a class="portfolio-link" href="./Projects/Classic-Arcade-Game/arcade-game.html">
+                                 <img src="./images/projects_screenshots/Classic_Arcade_Game.png" alt="">
+                              </a>
+                           </div> 
+                           <div class="card-footer">
+                              <p>An arcade game that uses JavaScript object-oriented programming</p>
+                              <a href="./arcade-game-details.html" class="btn">Details</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-5">
+                        <div class="container mt-3">
+                           <div class="card">
+                              <div class="card-header">
+                                 <h4 class="card-title">Playlist App</h4>
+                              </div>
+                              <div class="card-body">
+                                 <a class="portfolio-link" href="./Projects/Playlist-App/playlist-app.html">
+                                    <img src="./images/projects_screenshots/Playlist_App.png" alt="">
+                                 </a>
+                              </div> 
+                              <div class="card-footer">
+                                 <p>React application. Searches Spotify, create and save playlist to the account</p>
+                                 <a href="#" class="btn">Details</a>
+                              </div>
+                           </div>
+                           </div>
+                     </div>
+                  </div>
+               </div>
+               <br>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

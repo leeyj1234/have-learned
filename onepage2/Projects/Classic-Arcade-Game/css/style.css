@@ -1,0 +1,74 @@
+body {
+  text-align: center;
+  position: relative;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  top: 147px;
+  width: 404px;
+  height: 300px;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+}
+.visible {
+  display: flex;
+}
+
+.checkmark {
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+  border: solid 3px lightgrey;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation-duration: 3s; /*here and below: keyframes are declared in index.html in the <head>*/
+}
+
+.modal-header {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4a4a4a;
+  letter-spacing: -1px;
+  animation-delay: 1s;
+}
+
+ .modal-exclamation {
+  font-size: 18px;
+  letter-spacing: -1px;
+  color: #4a4a4a;
+  animation-delay: 2s;
+}
+
+.modal-play-again {
+  margin-top: 50px;
+  width: 180px;
+  height: 30px;
+  background-color: #02ccba;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.25);
+  animation-delay: 3s;
+  float: right;
+  cursor: pointer;
+}

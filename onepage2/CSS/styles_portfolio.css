@@ -1,0 +1,103 @@
+body {
+   background-image: url(../images/background2.jpg);
+}
+
+
+.rounded-circle:hover {
+   border: 2px solid rgb(240, 188, 104);
+   transition: 0.5s;
+}
+
+
+.col-sm-8 {
+   margin: 0 auto;
+}
+
+.row .col-sm-12 {
+   width: 55%;
+   background-color: rgba(255, 255, 255, 0.30);
+   margin: 0 auto;
+   padding: 2rem 0;
+}
+
+#portfolio-header h1{
+   font-size: 2rem;
+   font-weight: 200;
+   padding: 2rem 0;
+   background-color: rgba(255, 255, 255, 0.65);
+   width: 55%;
+   margin: 0 auto;
+   margin-top: 4rem;
+   color: rgba(0, 0, 0, 0.6);
+}
+
+#portfolio-container img {
+   width: 100%;
+}
+
+
+.row {
+   --bs-gutter-x: 0rem;
+}
+
+.mt-3 {
+   margin-top: 0 !important;
+}
+
+.col-sm-12 {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.col-sm-5 {
+   margin: 1rem 1rem;
+   border: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.card {
+   background-color: rgba(255, 255, 255, 0.85);
+}
+
+
+.portfolio-link img{
+   border: 2px solid transparent;
+}
+
+.portfolio-link:hover img{
+   border: 2px solid rgb(192, 192, 192);
+}
+
+.data-bs-toggle .data-bs-content {
+   color: red;
+}
+
+@media screen and (max-width: 1600px) {
+   .row .col-sm-12,  #portfolio-header h1 {
+      width: 75%;
+   }
+}
+
+@media screen and (max-width: 1320px) {
+   .row .col-sm-12,  #portfolio-header h1 {
+      width: 85%;
+   }
+
+}
+
+@media screen and (max-width: 960px) {
+   .row .col-sm-12,  #portfolio-header h1 {
+      width: 90%;
+   }
+}
+
+@media screen and (max-width: 720px) {
+
+   .col-sm-5 {
+      width: 85%;
+   }
+}
+
+
+
+

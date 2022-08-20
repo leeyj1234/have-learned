@@ -1,0 +1,151 @@
+body {
+   background-image: url(../images/portfolio_background_XXL.jpg);
+
+}
+
+.row {
+   --bs-gutter-x: 0rem;
+}
+
+.project-details-header {
+   font-size: 2rem;
+   font-weight: 200;
+   padding: 2rem 0;
+   background-color: rgba(255, 255, 255, 0.65);
+   width: 65%;
+   margin: 0 auto;
+   margin-top: 4rem;
+   color: rgba(0, 0, 0, 0.6);
+}
+
+.project-details-body {
+   width: 65%;
+   background-color: rgba(255, 255, 255, 0.30);
+   /* background-color: rgba(0,0,0,.03); */
+   margin: 0 auto;
+}
+
+.project-details-body article {
+   margin: 4rem auto;
+   width: 90%;
+   background-color: rgba(255, 255, 255, 0.85);
+   color: black;
+   padding: 5rem 3rem;
+   font-family: "Work Sans", Arial, sans-serif;
+   font-weight: 300;
+   font-size: 1.1rem;
+   text-indent: 1.5rem;
+   column-count: 2;
+   text-align: justify;
+   word-break: break-word;
+}
+
+h2 {
+   font-size: 1.4rem;
+   font-weight: 300;
+}
+
+h3 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.15rem;
+      font-weight: 300;
+}
+
+h4 {
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 1rem;
+   font-weight: 300;
+}
+
+ul {
+   list-style-type: square;
+   padding-left: 1rem;
+   text-indent: 6px;
+}
+
+a  {
+   color: red;
+   text-decoration: none;
+}
+
+.go-back-link {
+   border: 2px solid transparent;
+}
+
+.article-footer .go-back-link {
+   margin-left: 14rem;
+   padding: 6px 6px 10px;
+}
+
+.article-footer  {
+   margin-bottom: 4rem;
+}
+
+.go-back-link img {
+   width: 36px;
+   height: auto;
+}
+
+.go-back-link:hover{
+   border-radius: 3px;
+   border: 2px solid rgb(192, 192, 192);
+}
+
+.go-back-link img:active {
+   background-color: rgba(240, 188, 104, 0.25);
+}
+
+.btn {
+   padding: 0;
+   text-align: left;
+}
+
+.mt-3 {
+   margin-top: 0 !important;
+}
+
+.article-footer {
+   margin-top: 2rem;
+   text-indent: 1rem;
+}
+
+#show-more-details, #show-more-details {
+   margin-bottom: 4rem;
+}
+#second-article {
+   display: none;
+}
+
+
+@media screen and (max-width: 1600px) {
+}
+
+@media screen and (max-width: 1320px) {
+   .project-details-header, .project-details-body {
+      width: 75%;
+   }
+}
+
+@media screen and (max-width: 960px) {
+   .project-details-header, .project-details-body {
+      width: 85%;
+   }
+
+   .project-details-body article {
+      column-count: 1;
+   }
+
+}
+
+@media screen and (max-width: 720px) {
+   .project-details-header, .project-details-body {
+      width: 95%;
+   }
+
+}
+
+
+
+

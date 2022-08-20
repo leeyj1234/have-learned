@@ -1,0 +1,80 @@
+body, html {
+   height: 100%;
+   margin: 0;
+   overflow: scroll;
+}
+.container-fluid {
+   padding: 5rem 0 2rem 0;
+}
+
+.row {
+   width: 40%;
+   margin: 0 auto;
+}
+
+img {
+   width: 100%;
+}
+
+.text {
+   opacity: 0;
+   border: 2px solid silver;
+   margin: 2rem auto;
+   background-color: rgb(255, 255, 255);
+   color: black;
+   padding: 2rem 3rem;
+   font-family: "Work Sans", Arial, sans-serif;
+   font-weight: 300;
+   font-size: 1.1rem;
+   text-indent: 1.5rem;
+   text-align: justify;
+   word-break: break-word;
+
+   animation: div-opacity 3s 0.5s;
+   animation-fill-mode: forwards;
+   animation-timing-function:ease-in;
+}
+
+p {
+   font-weight: 400;
+}
+
+@keyframes div-opacity {
+   from {opacity: 0;}
+   to {opacity: 0.9;}
+}
+
+
+@media screen and (max-width: 1600px) {
+   .row {
+      width: 50%;
+   }
+}
+
+@media screen and (max-width: 1320px) {
+   .row {
+      width: 60%;
+   }
+}
+
+@media screen and (max-width: 960px) {
+   .row {
+      width: 70%;
+   }
+}
+
+@media screen and (max-width: 720px) {
+   .row {
+      width: 80%;
+   }
+}
+
+@media screen and (max-width: 575px) {
+   .row {
+      width: 90%;
+   }
+}
+
+
+
+

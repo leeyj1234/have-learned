@@ -1,0 +1,97 @@
+body {
+   background-image: url(../images/background.jpg);
+}
+
+.about-me-header {
+   background-color: rgba(128, 128, 128, 0.75);
+   width: 50%;
+   margin: 3rem auto 5rem;
+   padding: 1.5rem 0;
+}
+
+.about-me-header h1 {
+   font-size: 2rem;
+   text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+   font-weight: 200;
+   margin-bottom: 1.5rem;
+}
+
+.about-me-header h2 {
+   font-size: 1.2rem;
+   width: 75%;
+   margin: 0 auto;
+   line-height: 1.65rem;
+}
+
+.about-me-text, .skills{
+   background-color: rgba(252, 255, 255, 0.85);
+   color: black;
+   margin: 0 auto;
+   padding: 2rem;
+   width: 50%;
+   font-family: "Work Sans", Arial, sans-serif;
+   font-weight: 300;
+   font-size: 1.1rem;
+   text-indent: 1.5rem;
+}
+
+.rounded-circle:hover {
+   border: 2px solid rgb(240, 188, 104);
+   transition: 0.5s;
+}
+
+.about-me-text {
+   column-count: 2;
+   padding: 5rem 3rem;
+}
+
+
+.skills {
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+
+.skills h1 {
+   margin-bottom: 1.5rem;
+   font-size: 2rem;
+   font-weight: 300;
+}
+
+.skills .p-2 {
+   display: flex;
+   justify-content: center;
+}
+.skills .p-2 img {
+   width: 42px;
+}
+
+.skills .p-2:hover {
+   border: none;
+}
+.skills .p-2:active {
+   background-color: transparent;
+}
+
+@media screen and (max-width: 1600px) {
+   .about-me-header, .about-me-text, .skills {
+      width: 60%;
+   }
+}
+
+@media screen and (max-width: 1320px) {
+   .about-me-header, .about-me-text, .skills {
+      width: 70%;
+   }
+}
+
+@media screen and (max-width: 960px) {
+   .about-me-header, .about-me-text, .skills {
+      width: 80%;
+   }
+   .about-me-text {
+      column-count: 1;
+   }
+}
+
+
+

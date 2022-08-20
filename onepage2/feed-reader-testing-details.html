@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Feed Reader Testing Details</title>
+      <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+      <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./CSS/styles.css">
+      <link rel="stylesheet" href="./CSS/styles-project-details.css">
+      <script src="./bootstrap/bootsrtap.bundle.min.js"></script>
+   </head>
+   <body>
+      <div class="container-fluid col-sm-8">
+         <div class="container project-details-container">
+            <div class="row">
+               <div class="project-details-header">
+                  <h1>Feed Reader Testing Details</h1>
+               </div>
+            </div>
+            <br>
+            <div class="row project-details-body">
+               <article id="first-article">
+                  <section>
+                     <h2>Project Overview</h2>
+                     <p>
+                        The goal of this project is to learn "testing-driven development" as an essential part of the
+                        web development process. A starter code was provided; it includes
+                        <a href="https://jasmine.github.io/index.html">Jasmine</a> - the main testing instrument for this project.
+                        Jasmine is an open-source testing framework for JavaScript.
+                     </p>
+                  </section>
+
+                  <div class="article-footer">
+                     <a href="#" class="btn" id="show-more-details" onclick="showMore()">Implementation Details</a>
+                     <a href="./portfolio.html" class="go-back-link" id="first-go-back-link">
+                        <img src="./images/icons/go-back.png" alt="go back icon" data-bs-toggle="tooltip" title="Go back">
+                     </a>
+                  </div>
+               </article>
+               <article class="project-details-body-extended" id="second-article">
+                  <section>
+
+                     <h3>The Tests List</h3>
+                     <ol>
+                        <li>Test to ensure that the <em>`allFeeds`</em>  variable has been defined and is not empty.</li>
+                        <li>
+                           Loop through each feed in the <em>`allFeeds`</em> object and ensure it has a URL defined and 
+                           that the URL is not empty.
+                        </li>
+                        <li>
+                           Loop through each feed in the <em>`allFeeds`</em>  object and ensure it has a name defined
+                           and that the name is not empty.
+                        </li>
+                        <li>Ensure the menu elements are hidden by default.</li>
+                        <li>Ensure the menu changes its visibility when the menu icon is clicked.</li>
+                        <li>
+                           Ensure when the <em>`loadFeed()`</em> function is called and completes its work, there is at 
+                           least a single <em>.entry</em>  element within the <em>.feed</em>  container.
+                        </li>
+                        <li>Ensure when a new feed is loaded by the <em>`loadFeed()`</em>  function that, the content changes.</li>
+                     </ol>
+
+                     <br>
+                     <h3>How to Run Tests</h3>
+                     <ol>
+                        <li>In the project's root folder, find and double click `index.html` file.</li>
+                        <li>It will open a new page in your browser with the RSS feed at the top and Jasmine at the bottom.</li>
+                        <li>Jasmine section contains all tests. If a test passes successfully, it will be green; otherwise - it will be red.</li>
+                        <li>
+                           All tests mentioned in the previous paragraph are in the <em>`feedreader.js`</em>,  which can be found in 
+                           <em>FeedReader`>`jasmine`>`spec`</em> ` folder.
+                        </li>
+                     </ol>
+
+
+
+                  </section>
+
+
+                  <div class="article-footer">
+                     <a href="#" class="btn" id="show-less-details" onclick="showLess()">Show Less Details</a>
+                     <a href="./portfolio.html" class="go-back-link" id="second-go-back-link">
+                        <img src="./images/icons/go-back.png" alt="go back icon" data-bs-toggle="tooltip" title="Go back">
+                     </a>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </div>
+      <script src="./scripts/main.js"></script>
+   </body>
+</html>

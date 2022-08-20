@@ -1,0 +1,252 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/geometry2.png);
+  font-family: "Coda", cursive;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+  /*Animation for  the game */
+@keyframes card-from-closed-to-opened {
+  from {
+    background: #2e3d49;
+  }
+
+  to {
+    background: #02b3e4;
+  }
+}
+
+@keyframes card-from-opened-to-closed {
+  from {
+    background: #02b3e4;
+  }
+
+  to {
+    background: #2e3d49;
+  }
+}
+
+@keyframes card-from-opened-to-matched {
+  from {
+    background: #02b3e4;
+  }
+  to {
+    background: #02ccba;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rotate {
+  from {
+        transform: rotate(0deg);
+  }
+  to {
+        transform: rotate(360deg);
+  }
+}
+
+  /* Styles for the deck of cards*/
+.clock {
+  padding: 0 7px 0 0;
+}
+
+.deck {
+  width: 660px;
+  min-height: 680px;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3em;
+}
+
+.deck .card {
+  height: 125px;
+  width: 125px;
+  background: #2e3d49;
+  font-size: 0;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  animation-name: card-from-opened-to-closed;
+  animation-duration: 0.6s;
+}
+
+.deck .card.open {
+  transform: rotateY(0);
+  background: #02b3e4;
+  cursor: default;
+  animation-name: card-from-closed-to-opened, pulse;
+  animation-duration: 0.6s;
+  height: 125px;
+  width: 125px;
+  background: #2e3d49;
+  font-size: 33px;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+  transform: rotateY(0);
+  background: #02b3e4;
+  cursor: default;
+}
+
+.deck .card.show {
+  font-size: 42px;
+}
+
+.deck .card.match {
+  cursor: default;
+  background: #02ccba;
+  font-size: 33px;
+  animation-name: card-from-opened-to-matched, pulse; /*  here and bellow: Don't use the _animation_ shorhand. In makes keyframes' work asynchronous, even if the same time duration is declared */
+  animation-duration: 0.6s;
+  cursor: default;
+  background: #02ccba;
+  font-size: 33px;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+  /* Styles for the Score Panel*/
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 10px;
+}
+
+.score-panel .stars {
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  color: #ffa500;
+}
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+  animation-name: rotate;
+  animation-duration: 1s;
+}
+
+  /* Styles for the Modal Window*/
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.visible {
+  display: flex;
+}
+
+.checkmark {
+  width: 110px;
+  height: 110px;
+  padding: 8px;
+  border: solid 4px lightgrey;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation-duration: 3s; /*here and below: keyframes are declared in index.html in the <head> and class name of */
+}
+
+.modal-header {
+  font-size: 42px;
+  font-weight: 700;
+  color: #4a4a4a;
+  letter-spacing: -2px;
+  animation-delay: 1s;
+}
+
+ .modal-stats, .modal-exclamation {
+  font-size: 22px;
+  letter-spacing: -1px;
+  color: #4a4a4a;
+  animation-delay: 2s;
+}
+
+.modal-play-again {
+  margin-top: 40px;
+  width: 210px;
+  height: 52px;
+  background-color: #02ccba;
+  color: #fff;
+  text-align: center;
+  padding: 11px 0;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.25);
+  cursor: pointer;
+  animation-delay: 3s;
+  float: right;
+  cursor: pointer;
+}
