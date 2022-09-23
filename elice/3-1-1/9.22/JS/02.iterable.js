@@ -50,7 +50,7 @@ console.log('------');
 //2.리턴 next(){
 	// return { value: num++ * 2, done: num > max };
 	//}
-}
+	
 const evenMaker = {
 	[Symbol.iterator]: () => {
 		const max = 5;
