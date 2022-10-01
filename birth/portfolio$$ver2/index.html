@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="./css/reset.css">    
+    <link rel="stylesheet" href="./css/index.css">
+    <script defer src="./js/script.js"></script>
+
+    <style>
+        .hide{
+            display: none;
+        }
+
+        .show{
+            display: block;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="wrap po-relative">
+    <header class="header po-fix po-top-left" style="z-index: 3;">
+        <!-- zIndex'3' -->
+        <h1 class="logo read-hidden po-fix" style="z-index: 4;"><a href="#">감정의미술관</a></h1>
+        <!-- zIndex'4' -->
+        <h2 class="read-hidden" style="height: 0;">어서오세요. 감정의미술관입니다.</h2>
+        <nav id="header-gnb" class="hide">
+            <ul class="per-width100 dis-flex">
+                <li><a href="#" class="first">서문</a></li>
+                <li><a href="#" class="second">작품집</a></li>
+                <li><a href="#" class="third">연락</a></li>
+                <li><a href="#" class="fourth" onclick="notice()">알림</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contents dis-flex">
+        <div id="container-main">
+            <section class="main po-relative">
+                <section class="front po-ab po-top-left" style="z-index: 2;">
+                    <!-- zIndex'2' -->
+        
+                    <div class="lylics-box">
+                        <!-- 미정 /////////////////////////////////-->
+                        
+                    </div><!--.lylics-box-->
+        
+                    <div class="lylics-cover">
+                        <form action="" method="POST">
+                            <div class="lylics wid-270px">
+                                <input class="per-width100" type="text" placeholder="입력하세요">
+                            </div><!--.lylics-->
+                        </form>
+                    </div><!--.lylics-cover-->
+        
+                </section>
+                <section class="back po-relative">  
+                    <div class="background-text" style="z-index: 1;">
+                        <!-- zIndex'1' -->
+                        <div class="background-text-inner">
+                            <h3>어떻게 공기를 사고판단 말인가</h3>
+                            <br><br>
+                            <p>
+                            &nbsp;&nbsp;우리는 우리의 땅을 사겠다는 당신들의 제안에 대해 심사숙고할 것이다. 하지만 나의 부족은 물을 것이다. 얼굴 흰 추장이 사고자하는 것이 무엇인가를. 그것은 우리로서는 무척 이해하기 힘든일이다. 우리가 어떻게 공기를 사고팔 수 있단 말인가? 대지의 따뜻함을 어떻게 사고판단 말인가? 우리로서는 상상하기조차 어려운 일이다. 부드러운 공기와 재잘거리는 시냇물을 우리가 어떻게 소유할 수 있으며, 또한 소유하지도 않은 것을 어떻게 사고팔 수 있단 말인가?
+                            햇살 속에 반짝이는 소나무들, 모래사장, 검은 숲에 걸려있는 안개, 눈길 닿는 모든 곳, 잉잉대는 꿀벌 한 마리까지도 우리의 기억과 가슴속에서는 모두가 신성한 것들이다. 나무에서 솟아오르는 수액은 우리 얼굴 붉은 사람들의 기억 속에 고스란히 살아 있다.
+                            </p>
+                            <br><br>
+                            <p>
+                            <em>&nbsp;&nbsp;아무리 해도 이해가 가지 않는다.</em> 우리의 방식은 당신들의 방식과는 다르다. 우리가 대지를 팔아야 한다면, <strong>당신들은 알아야 한다.</strong> 그 공기 또한 우리에게 더 없이 소중한 것임을. 살아 있는 모든 것들에게 숨결을 불어넣어 주는 것이 공기이며, 모든 아침마다 우리가 맞이하는 것도 그 공기다. 바람은 나의 할아버지에게 첫 숨과 마지막 숨을 주었다. 그 바람은 우리 아이들에게도 생명을 불어다 줄 것이다.
+                            </p>
+                            <br><br>
+                            <p>
+                            &nbsp;&nbsp;우리는 대지의 일부분이며 대지는 우리의 일부분이다. 들꽃은 우리의 누이이고, 순록과 말과 독수리는 우리의 형제다. 강의 물결과 초원에 핀 꽃들의 수액, 조랑말의 땀과 인간의 땀은 모두 하나다. 모두가 같은 부족, 우리의 부족이다.
+                            </p>
+                            <br><br>
+                            <div style="text-align: right;">류시화 엮음,『나는 왜 너가 아니고 나인가』, 도서출판-더숲(2018), 19page</div>
+                        </div><!--.background-text-inner-->      
+                    </div><!--.background-text-->
+                </section>
+            </section><!--.main-->
+        </div><!--#container-main-->
+
+        <div id="container-album" >
+            <section class="album po-relative" style="z-index: 1;">
+                <!-- zIndex'1' -->                
+                <section class="album-slide">
+                    <div class="painting-slide">
+                        <ul>
+                            <li>
+                                <figure>
+                                    <img class="painting-background" src="./img/1-1.jpg" alt="앙리루소 제 22회 안덴빤단 전시회에 참여하도록 예술가들을 이끄는 자유의 여신">
+                                    <figcaption class="painting-explain">앙리루소 제 22회 안덴빤단 전시회에 참여하도록 예술가들을 이끄는 자유의 여신</figcaption>
+
+                                    <h2 class="read-hidden">
+                                        앙리 루소는 프랑스의 화가이다.
+
+                                        가난한 배관공의 자제로, 프랑스 마옌 데파르트망(Department) 라발에서 태어났다. 전문적인 미술 교육 없이, 파리 세관에서 세관원으로 근무하며 틈틈이 그림을 그리기 시작했다. 언제부터 어떠한 계기로 그림을 그리기 시작했는지 명확하지 않으나 30대 중반에 이미 환상과 전설, 원시성이 서식하는 이미지의 세계를 보여 주었다. 독학으로 주말마다 그림을 그렸기에 ‘일요화가’의 대명사로도 널리 알려져 있다. 그가 미술을 시작한 이 시기에 르 두아니에(Le Douanier:세관원)란 애칭을 얻게 되었다.
+                                    </h2>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="painting-background" src="./img/1-2.jpg" alt="앙리루소 교외의 장면">
+                                    <figcaption class="painting-explain">앙리루소 교외의 장면</figcaption>
+
+                                    <h2 class="read-hidden">
+                                        그의 작품은 초기에는 그가 독학으로 미술을 시작했다는 것과 어색한 인체 비례, 환상과 사실의 색다른 조합 등의 이유로 조소와 비난의 대상이 되었지만, 사후에 《경악(驚愕:숲속의 폭풍)》(1891) 《잠자는 집시》(1897) 《뱀을 부리는 여인》(1907) 《시인의 영감》(1909)과 같은 그의 그림은 참신성과 원시적인 자연스러움을 근거로 높이 평가되었다. 그의 원시림과 같은 원초적인 세계에 대한 동경과 환상성, 강렬한 색채는 현대예술의 거장 피카소, 아폴리네르 등에 영향을 크게 미쳤다고 알려져 있다.
+                                    </h2>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="painting-background" src="./img/1-3.jpg" alt="앙리루소 잠자는 집시">
+                                    <figcaption class="painting-explain">앙리루소 잠자는 집시</figcaption>
+                                        
+                                    <h2 class="read-hidden">
+                                        1880년경부터 그림을 그렸다고 추정되는데, 당시의 관학파(官學派)인 제롬, 클레망 등을 존경하였다고 한다. 그의 작품 <행복한 콰르테트>(1902)는 제롬의 <순결>에서, 그리고 <잠자는 집시의 여인>(1897)도 제롬의 <두 사람의 왕>에서 힌트를 얻었다고 한다.
+                                    </h2>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="painting-background" src="./img/1-4.jpg" alt="앙리루소 이국적인 풍경">
+                                    <figcaption class="painting-explain">앙리루소 이국적인 풍경</figcaption>
+
+                                    <h2 class="read-hidden">
+                                        그동안 소박하고 서툰 아마추어 화가로만 평가받았던 루소가 빛을 보게 된 계기는 1908년에 피카소에 의해 높은 평가를 받고, 다른 예술과들과 공감을 형성하면서부터이다. 피카소는 그가 자주 이용하던 골동품 가게에서 루소의 《부인상》을 사 왔고, 이를 축하하기 위해 당시 신진 화가들이 모여 살던 바드라 아파트에서 '루소의 밤'을 개최하였다. 이때 그의 인간됨과 예술이 찬양되었고 그의 작품세계가 인정받을 수 있었다.
+                                    </h2>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="painting-background" src="./img/2-1.jpg" alt="빈센트 반 고흐 별이 빛나는 밤">
+                                    <figcaption class="painting-explain">빈센트 반 고흐 별이 빛나는 밤</figcaption>
+
+                                    <h2 class="read-hidden">
+                                        빈센트 반 고흐의 대표작 중 하나로 꼽히는 《별이 빛나는 밤》은 그가 고갱과 다툰 뒤 자신의 귀를 자른 사건 이후 생레미의 요양원에 있을 때 그린 것이다. 그는 병실 밖으로 내다보이는 밤 풍경을 기억과 상상을 결합시켜 그렸는데, 이는 자연에 대한 반 고흐의 내적이고 주관적인 표현을 구현하고 있다.
+                                    </h2>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="painting-background" src="./img/2-2.jpg" alt="빈센트 반 고흐 사이프러스 나무가 있는 밀밭">
+                                    <figcaption class="painting-explain">빈센트 반 고흐 사이프러스 나무가 있는 밀밭</figcaption>
+
+                                    <h2 class="read-hidden">
+                                        아를르와 달라서 생 레미의 풍경은 황량하여, 이 작품은 그것을 색조로도 나타내는데, 힘있게 움직이는 표현은, 고흐에게 뛰는 듯한 충동 속에 흔들리지 않고 황량한 그대로 보여주는 인상이다. 고흐는 심신을 불태우는 제작만 계속하는데, 회화에는 생명이 가장 중요하다고 하는 만큼, 그 생명을 고흐만큼 생동시킨 화가도 보기 드물다.
+                                        그 지방은 바람이 거칠어 이 화면에서도 생 레미의 들판에서는 보리가 흔들거리고, 나무는 바람을 머금고 있다. 전경(前景)의 보리에 거듭된 터치는 정열의 파장(波長)이 전달되어 감돌고, 나지막하게 전개시킨 산도 움직이며, 하늘에는 흰구름이 소용돌이치듯 휘감기고 있다. 그리고 오른편에 측백나무가 섰다. 가지를 감아올리고 선 올리브 나무는 마치 녹색의 불꽃 같다. 더욱이 보리밭에서까지 느껴지는 침통함이 가득 흐르고 있는데, 얼마 안 되는 화초가 앞에서 가련한 빨간빛을 점점이 띠고 있다.
+                                    </h2>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="painting-background" src="./img/2-3.jpg" alt="빈센트 반 고흐 정오의 휴식">
+                                    <figcaption class="painting-explain">빈센트 반 고흐 정오의 휴식</figcaption>
+
+                                    <h2 class="read-hidden">
+                                        한낮의 휴식 또는 정오의 휴식 또는 낮잠(Noon – Rest from Work)은 캔버스에 유채이며 73x91cm이다.
+
+                                        1889~1890년에 완성된 빈센트 반 고흐 (Vincent van Gogh)의 작품이다.[1]
+
+                                        위의 이미지는 고화질로 붓터치를 살펴볼 수 있다.
+
+                                        프랑스 국립 오르세미술관에 소장되어 있다.
+
+                                        고흐는 이 그림 이외에도 밀레의 여러 그림들을 통해 영감을 받아 자신만의 표현을 그려냈다.
+                                    </h2>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="painting-background" src="./img/3-1-1.jpg" alt="리즈베스 츠베르거 일러스트, 책 캔터빌의 유령1">
+                                    <figcaption class="painting-explain">리즈베스 츠베르거 일러스트, 책 캔터빌의 유령1</figcaption>
+
+                                    <h2 class="read-hidden">
+                                        1954년 오스트리아 빈에서 태어나 빈 예술 아카데미를 졸업했다. 낭만적이고 고전적인 이야기를 절제된 그림을 통해 잘 표현한다고 평을 받는 그녀는 19세기 영국 일러스트를 만나는것 같은 느낌을 주는 그림을 그린다. 볼로냐 아동 도서전 그래픽상, 브라티슬라바 국제 비엔날레상과 함께 1990년 어린이 문학 분야에 가장 크게 공헌한 작가와 화가에게 수여하는 안데르센상 등 수많은 상을 받았으며, 20세기 최고의 일러스트레이터로 찬사를 받았다. 아련하면서도 투명한 그림체로 동화책에 생명력을 불어넣는 그녀가 그린 책으로는『오즈의 마법사』, 『안데르센 동화』, 『호두까기 인형』 등 30여권이 넘는 동화가 있다.
+                                    </h2>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img class="painting-background" src="./img/3-2-1.jpg" alt="리즈베스 츠베르거 일러스트, 책 캔터빌의 유령2">
+                                    <figcaption class="painting-explain">리즈베스 츠베르거 일러스트, 책 캔터빌의 유령2</figcaption>
+
+                                    <h2 class="read-hidden">
+                                        리즈베스 츠베르거는 그래픽 아티스트였던 아버지의 영향으로 어린 시절부터 안데르센이나 그림 형제의 동화를 읽으며 예술적 분위기 속에서 성장했다. 1971년 미술공예대학(The Applied Arts Academie of Vienne)에 입학하고 회화를 전공했다. 그녀가 삽화가의 꿈을 꾸기 시작한것은 어린이 책 작가인 존 로위(Jonn Rowe)와 만나 결혼하게 되면서 부터였다. 어느날 우연히 그녀의 친구 중 하나가 락컴이 그림을 그린 『이솝우화』집을 리츠베트에게 건네 주었는데 세심한 세부 묘사가 돋보이는 락컴의 그림에 매료되어 더욱 작품에 정진하게 된다. 그녀의 열렬한 지원자인 어머니는 그녀의 작품을 들고 출판업자인 마이클 노이게바우어(Michael Neugebaue)를 찾아갔고 그렇게 해서 그녀의 첫번째 책 E.T.A. 호프만(Hoffmann) 원작의『이상한 아이』그림이 탄생하게 된다.
+                                    </h2>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div><!--.painting-slide-->
+                </section>
+            </section><!--.album-->
+        </div><!--.container-album-->
+
+        <article class="contact-email per-width100 po-ab po-top-left">            
+            <section class="contact-email-inner front">
+                <div class="animated-cartoon wid-270px">
+                    <h2 class="read-hidden">
+                        에릭칼의 배고픈벌레 동영상이 아래에 준비되어 있습니다.
+                    </h2>
+    
+                    <iframe src="https://www.youtube.com/embed/75NQK-Sm1YY"></iframe>
+                </div><!--.iframe-cover-->
+                <h2 class="title">에릭칼,배고픈벌레The Very Hungry Caterpillar</h2>
+                <br><br>
+                <form action="">
+                    <h2 class="read-hidden">
+                        문의글을 작성하는 칸이 아래에 준비되어 있습니다.
+                    </h2>
+    
+                    <p class="ask-something"><textarea name="" id="" class="center-translateX" autofocus></textarea></p>
+                    <p class="ask-something-notice">
+                        문의하실 내용을<br>
+                        293451@naver.com 메일주소로 보내주세요.<br>
+                        형식은 중요하지 않으니, 편하신 방식으로 주셔도 괜찮습니다.
+                    </p>
+                    <fieldset class="send-cancel-btn wid-270px dis-flex">
+                        <legend class="ask-something-btn center-translateX">
+                            <button type="reset">전송</button>
+                            <button type="submit">취소</button>
+                        </legend>
+
+                        <button class="ask-closer po-fix" onclick="close()"><span class="read-hidden">닫기</span></button>
+
+                    </fieldset>
+                </form>
+            </section>
+        </article>
+    </section>
+    <footer class="footer po-fix po-bott-left per-width100" style="z-index: 4;">
+        <!-- zIndex'4' -->
+        <section id="footer-inner"  class="hide">
+            <ul class="sns-icons dis-flex wid-270px">
+                <li class="xi-instagram xi-2x"><a target="_blank" href="https://www.instagram.com/"><span>인스타그램</span></a></li>
+                <li class="xi-facebook-official xi-2x"><a target="_blank" href="https://www.facebook.com/"><span>페이스북</span></a></li>
+                <li class="xi-twitter xi-2x"><a target="_blank" href="https://twitter.com/?lang=ko"><span>트위터</span></a></li>
+                <li class="xi-youtube xi-2x"><a target="_blank" href="https://www.youtube.com/"><span>유튜브</span></a></li>
+                <li class="xi-kakaotalk xi-2x"><a target="_blank" href="https://www.kakaocorp.com/page/service/service/KakaoTalk"><span>카카오톡</span></a></li>
+                <li class="xi-naver xi-2x"><a target="_blank" href="https://www.naver.com/"><span>네이버</span></a></li>
+            </ul>
+        </section>
+    </footer>
+</div><!--.wrap-->
+</body>
+</html>
